@@ -9,6 +9,7 @@ let competences = {
 let elements = document.querySelector('#liste-competences').querySelectorAll('h2');
 let tab = Object.values(competences);
 let i = 0;
+
 for (const propriete in competences) {
     if (parseInt(tab[i].substring(0, tab[i].length - 1)) < 50) {
         elements[i].style.backgroundColor = "red";
@@ -19,6 +20,6 @@ for (const propriete in competences) {
         elements[i].style.backgroundColor = "green"
         elements[i].style.color = " white";
     }
-    elements[i].innerText = tab[i];
-    i++;
+    elements[i].innerText += ' ' + tab[i];
+    i++;        
 }
