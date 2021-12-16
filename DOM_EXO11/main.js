@@ -3,16 +3,19 @@ let myObject = {
     age: 18,
 }
 
-let exo1 = document.querySelector("#object")
+let exo1 = document.querySelector("#object").children
 console.log(exo1)
 
-let myElements = Object.values(myObject)
+let myElements = [exo1[0], exo1[1]]
 console.log(myElements)
 
-for (const property in myObject) {
-    let i = 0;
-    console.log(`${property}: ${myObject[property]}`);
-    console.log(myElements[i])
+let tabProp = Object.values(myObject);
+console.log(tabProp)
+
+let i = 0;
+for (const propriete in myObject){
+    console.log(myObject[propriete])
+    
     i++;
-  }
+}
 
